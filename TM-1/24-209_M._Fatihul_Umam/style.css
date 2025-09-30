@@ -34,7 +34,7 @@ body {
       color: #555;
     }
 
-    input, select, textarea {
+    input, select{
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
@@ -44,7 +44,7 @@ body {
       transition: border 0.3s;
     }
 
-    input:focus, select:focus, textarea:focus {
+    input:focus, select:focus{
       border-color: #4a90e2;
     }
 
