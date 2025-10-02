@@ -1,3 +1,11 @@
+<?php 
+
+  function Table (ukuran, aturan, warna){
+    
+  }
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
