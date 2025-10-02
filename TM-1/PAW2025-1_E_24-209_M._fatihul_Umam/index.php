@@ -1,6 +1,10 @@
 <?php 
-    $nama = $_POST["nama"];
+    $ukuran = $_POST["ukuran"];
+    $aturan = $_POST["aturan"];
+    $warna = $_POST["warna"];
 
-    echo "$nama"
+    echo "$nama";
+    echo "$aturan";
+    echo "$warna";
 
 ?>
