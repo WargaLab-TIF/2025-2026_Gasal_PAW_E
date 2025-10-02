@@ -1,0 +1,104 @@
+/* styles.css
+   Catatan singkat:
+   - Hindari font Times New Roman (pakai sistem sans-serif)
+   - Semua styling di CSS, bukan atribut HTML
+*/
+:root {
+  --bg: #0b0c10;
+  --fg: #e5e7eb;
+  --muted: #9aa0a6;
+  --border: #2b2f36;
+
+  /* Warna highlight dasar; akan dioverride oleh kelas warna- */
+  --mark: #3b82f6; /* biru default */
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 16px 48px;
+}
+
+h1 { margin: 0 0 8px; font-size: 28px; }
+.note { color: var(--muted); margin: 0 0 20px; }
+
+/* Form controls */
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 12px;
+  background: #111318;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.controls label { display: grid; gap: 6px; font-size: 14px; }
+.controls input[type="number"],
+.controls select {
+  width: 100%;
+  padding: 8px 10px;
+  background: #0f1218;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+}
+.controls button {
+  align-self: end;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #1f2937;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.controls button:hover { filter: brightness(1.1); }
+
+/* Tabel */
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0f1218;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.grid thead th {
+  position: sticky; top: 0;
+  background: #121521;
+  z-index: 1;
+}
+.grid th, .grid td {
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: 600; /* header tebal, sel biasa akan override di bawah */
+}
+.grid td {
+  font-weight: 400;
+}
+.grid tbody tr:nth-child(even) td { background: #0d1016; }
+
+.grid.checker tbody tr:nth-child(even) td { background: #0f1218; }
+
+.cell.mark {
+  background: color-mix(in oklab, var(--mark) 25%, #0f1218);
+  outline: 2px solid color-mix(in oklab, var(--mark) 60%, #0f1218);
+}
+
+.warna-biru  { --mark: #3b82f6; }
+.warna-hijau { --mark: #22c55e; }
+.warna-kuning{ --mark: #eab308; }
+.warna-merah { --mark: #ef4444; }
+
+.foot { margin-top: 16px; color: var(--muted); font-size: 13px; }
