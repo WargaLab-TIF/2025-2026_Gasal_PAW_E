@@ -3,7 +3,7 @@
     $aturan = $_POST["aturan"];
     $warna = $_POST["warna"];
 
-    echo "$nama";
+    echo "$ukuran";
     echo "$aturan";
     echo "$warna";
 
