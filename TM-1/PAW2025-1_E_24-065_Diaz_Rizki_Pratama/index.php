@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TM 1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     
@@ -16,7 +16,7 @@
 					<input type="number" name="range" required>
 				</div>
 				<div class="isi">
-					<label>Warna filter tampilan:</label>
+					<label>Warna filter tampilan:</label> <br>
 					<select name="color">
 						<option>Pilih warna</option>
 						<option value="red">Merah</option>
@@ -26,7 +26,7 @@
 						<option value="grey">Abu-abu</option>
 					</select>
 				</div>
-				<div class="isi">
+				<div class="isi"> 
 					<label>Aturan filter tampilan:</label>
 					<select name="rules">
 						<option>Pilih aturan</option>

@@ -141,6 +141,6 @@
     </table>
 
 <?php else: ?>
-    <p style="text-align: center; font-weight: bold; margin-top: 20px;">Silahkan pilih aturan filter tampilan!</p>
+    <p>Silahkan pilih aturan filter tampilan!</p>
 <?php endif; ?>
 <?php } ?>
