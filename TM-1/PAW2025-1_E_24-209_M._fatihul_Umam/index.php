@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create</title>
-    <link rel="stylesheet" type="text/css" href="ytta.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -41,6 +41,9 @@
           <button type="submit">Kirim Data</button>
         </form>
       </div>
+    </div>
+    <hr>
+    <div class="table-container">
         <?php 
           $ukuran = $_POST['ukuran'];
           $aturan = $_POST['aturan'];
@@ -48,6 +51,6 @@
 
           echo Table($ukuran, $aturan, $warna);
         ?>
-    </div>
+      </div>
 </body>
 </html>

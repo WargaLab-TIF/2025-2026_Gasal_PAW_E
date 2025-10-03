@@ -14,6 +14,8 @@
       case '4':
         Diagonal($ukuran, $warna);
         break;
+      default:
+        break;
     }
 
   }
