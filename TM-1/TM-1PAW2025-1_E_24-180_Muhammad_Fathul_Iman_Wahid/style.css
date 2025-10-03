@@ -1,0 +1,43 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+
+table.tabel-penjumlahan {
+    margin-top: 20px;
+}
+
+table.tabel-penjumlahan th,
+table.tabel-penjumlahan td {
+    padding: 5px 8px;
+    text-align: center;
+}
+
+
+.kubik-filter.merah,
+.prima-filter.merah,
+.perbatasan-filter.merah,
+.diagonal-filter.merah {
+    background-color: red;
+}
+
+.kubik-filter.hijau,
+.prima-filter.hijau,
+.perbatasan-filter.hijau,
+.diagonal-filter.hijau {
+    background-color: green;
+}
+
+.kubik-filter.biru,
+.prima-filter.biru,
+.perbatasan-filter.biru,
+.diagonal-filter.biru {
+    background-color: blue;
+}
+
+.kubik-filter.kuning,
+.prima-filter.kuning,
+.perbatasan-filter.kuning,
+.diagonal-filter.kuning {
+    background-color: yellow;
+}
