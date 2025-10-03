@@ -1,0 +1,36 @@
+body {
+	font-family: 'arial MT';
+}
+select, button {
+	font-family: 'arial MT';
+}
+table {
+    margin: auto;
+}
+table, th, td {
+    border: 2px solid;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+.box {
+	background-color: white;
+	height: 200px;
+}
+fieldset {
+	background-color: mediumaquamarine;
+	margin: 20px;
+	margin-bottom: 20px;
+	padding: 30px;
+  	gap: 10px 20px;
+}
+.isi{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.isi label{
+	width: 150px;
+	margin-right: 10px;
+}
