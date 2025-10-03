@@ -7,8 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create <Table></Table></title>
-    <link rel="stylesheet" href="style.css">
+    <title>Create</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="form-container">
@@ -22,10 +22,10 @@
         <label for="aturan">Aturan filter</label>
         <select id="aturan" name="aturan" required>
           <option value="">-- Pilih --</option>
-          <option value="Laki-laki">1</option>
-          <option value="Perempuan">2</option>
-          <option value="Perempuan">3</option>
-          <option value="Perempuan">4</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
         </select>
       </div>
       <div class="form-group">
@@ -39,6 +39,15 @@
       </div>
       <button type="submit">Kirim Data</button>
     </form>
+  </div>
+  <div class="form-container"> 
+    <?php 
+      $ukuran = $_POST['ukuran'];
+      $aturan = $_POST['aturan'];
+      $warna = $_POST['warna'];
+
+      echo Table($ukuran, $aturan, $warna);
+    ?>
   </div>
 </body>
 </html>
