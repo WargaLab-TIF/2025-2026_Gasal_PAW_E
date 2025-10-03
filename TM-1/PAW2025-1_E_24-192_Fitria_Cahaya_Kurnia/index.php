@@ -8,7 +8,6 @@
 </head>
 <body>
     <form method="POST">
-        <div class="pcc">
         <fieldset>
         <div class="box">
         <label>Batas Ukuran: </label>
@@ -40,18 +39,17 @@
         <button type="submit" name="submit" value="Submit">Submit</button>
         </div>
         </fieldset>
-        </div>
     </form>
-    <div class="pcc">
+
     <?php 
     if (isset($_POST['submit'])) {
         $batas = $_POST["batas"];
         $aturan = $_POST["aturan"];
         $warna = $_POST["warna"];
 
-        require_once 'bbb.php';
+        require_once 'fungsi.php';
         Maketab($batas, $aturan, $warna);
     }
-    ?></div>
+    ?>
 </body>
 </html>
