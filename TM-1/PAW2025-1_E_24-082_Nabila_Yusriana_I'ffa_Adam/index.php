@@ -39,7 +39,6 @@ $warna  = isset($_GET['warna'])  ? $_GET['warna']        : 'biru';
         <option value="2" <?= $aturan==='2'?'selected':''; ?>>Pola perbatasan (outer border)</option>
         <option value="3" <?= $aturan==='3'?'selected':''; ?>>Warnai bilangan prima</option>
         <option value="4" <?= $aturan==='4'?'selected':''; ?>>Arsiran diagonal ↘ (kiri-atas → kanan-bawah)</option>
-        <option value="5" <?= $aturan==='5'?'selected':''; ?>>Pola papan catur (persegi)</option>
       </select>
       </label>
 
@@ -67,3 +66,4 @@ $warna  = isset($_GET['warna'])  ? $_GET['warna']        : 'biru';
   </main>
 </body>
 </html>
+
