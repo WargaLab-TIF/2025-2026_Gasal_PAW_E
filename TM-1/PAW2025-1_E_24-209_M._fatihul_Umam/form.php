@@ -24,8 +24,10 @@
     echo "<Table>";
     for ($i=0; $i <= $ukuran; $i++) { 
       echo "<tr>";
-      for ($j=0; $j <= $ukuran; $j++) { 
-            if ($i == 0) {
+      for ($j=0; $j <= $ukuran; $j++) {
+            if ($i == 0 && $j == 0) {
+                echo "<th> </th>";
+             }elseif ($i == 0) {
                 echo "<th>$j</th>";
             }elseif ($j == 0) {
                 echo "<th>$i</th>";
@@ -49,7 +51,9 @@
     for ($i=0; $i <= $ukuran; $i++) { 
       echo "<tr>";
       for ($j=0; $j <= $ukuran; $j++) { 
-            if ($i == 0) {
+            if ($i == 0 && $j == 0) {
+                echo "<th></th>";
+             }elseif ($i == 0) {
                 echo "<th>$j</th>";
             }elseif ($j == 0) {
                 echo "<th>$i</th>";
@@ -74,7 +78,9 @@
     for ($i=0; $i <= $ukuran; $i++) { 
         echo "<tr>";
         for ($j=0; $j <= $ukuran; $j++) { 
-            if ($i == 0) {
+            if ($i == 0 && $j == 0) {
+                echo "<th> </th>";
+             }elseif ($i == 0) {
                 echo "<th>$j</th>";
             } elseif ($j == 0) {
                 echo "<th>$i</th>";
@@ -99,7 +105,9 @@
       echo "<tr>";
       $cek = $ukuran+1;
       for ($j=0; $j <= $ukuran; $j++) { 
-            if ($i == 0) {
+            if ($i == 0 && $j == 0) {
+                echo "<th> </th>";
+             }elseif ($i == 0) {
                 echo "<th>$j</th>";
             }elseif ($j == 0) {
                 echo "<th>$i</th>";
