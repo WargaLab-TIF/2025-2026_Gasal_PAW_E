@@ -10,6 +10,7 @@
 		echo "<table>";
 		$target = $ukuran;
 		for ($i = 0;$i <= $ukuran;$i++) {
+			/// $i merupakan baris
 			echo '<tr>';
 			if($i == 0) {
 				echo "<th></th>";
@@ -36,8 +37,7 @@
 						} else {
 							echo "<td>";
 						}
-						// echo gettype($akar);
-					} elseif (($i + $k) % 2 == 1 and $aturan == 2) {
+					} elseif (($i + $k) % 2 == 1 and $aturan == 2) { ///menghitung baris+kolom
 						echo "<td style='background-color:$warna;'>";
 					} elseif ($aturan == 3) {	
 						$count = 0;	
@@ -75,4 +75,5 @@
 		}
 		echo "</table>";
 	}
+
 ?>
