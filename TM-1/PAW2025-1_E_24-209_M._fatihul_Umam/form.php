@@ -65,12 +65,27 @@
   }
 
   function Diagonal ($ukuran, $warna){
-    echo "<Table>";
+    echo "<Table border='1'>";
+    for ($i=0; $i <= $ukuran; $i++) { 
       echo "<tr>";
-        echo "<td>";
-          
-        echo "</td>";
+      $cek = $ukuran+1;
+      for ($j=0; $j <= $ukuran; $j++) { 
+            if ($i == 0) {
+                echo "<th>$j</th>";
+            }elseif ($j == 0) {
+                echo "<th>$i</th>";
+            }else{
+                $nilai = $i**$j;
+                if ($i == $cek) {
+                    echo "<td style='background-color:$warna;'>".$nilai."</td>";
+                }else{
+                     echo "<td>".$nilai."</td>";
+                }
+            }
+            $cek--;
+      }
       echo "</tr>"; 
+    }    
     echo "</Table>";
   }
 
