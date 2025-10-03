@@ -1,48 +1,78 @@
 <?php 
 
-  function Table (ukuran, aturan, warna){
-    
+  function Table ($ukuran, $aturan, $warna){
+
+
+  }
+
+  function Kuadrat ($ukuran, $warna){
+    echo "<Table border='1'>";
+    for ($i=0; $i <= $ukuran; $i++) { 
+      echo "<tr>";
+      for ($j=0; $j <= $ukuran; $j++) { 
+            if ($i == 0) {
+                echo "<th>$j</th>";
+            }elseif ($j == 0) {
+                echo "<th>$i</th>";
+            }else{
+                $nilai = $i**$j;
+                $akar = sqrt($nilai);
+                if ($akar * $akar == $nilai) {
+                    echo "<td style='background-color:$warna;'>".$nilai."</td>";
+                }else{
+                     echo "<td>".$nilai."</td>";
+                }
+            }
+      }
+      echo "</tr>"; 
+    }    
+    echo "</Table>";
+  }
+
+  function Catur ($ukuran, $warna){
+    echo "<Table border='1'>";
+    for ($i=0; $i <= $ukuran; $i++) { 
+      echo "<tr>";
+      for ($j=0; $j <= $ukuran; $j++) { 
+            if ($i == 0) {
+                echo "<th>$j</th>";
+            }elseif ($j == 0) {
+                echo "<th>$i</th>";
+            }else{
+                $nilai = $i**$j;
+                if ($i % 2 == 1 && $j % 2 == 0) {
+                    echo "<td style='background-color:$warna;'>".$nilai."</td>";
+                }elseif ($i % 2 == 0 && $j % 2 == 1) {
+                    echo "<td style='background-color:$warna;'>".$nilai."</td>";
+                }else{
+                     echo "<td>".$nilai."</td>";
+                }
+            }
+      }
+      echo "</tr>"; 
+    }    
+    echo "</Table>";
+  }
+
+  function Komposit ($ukuran, $warna){
+    echo "<Table>";
+      echo "<tr>";
+        echo "<td>";
+          
+        echo "</td>";
+      echo "</tr>"; 
+    echo "</Table>";
+  }
+
+  function Diagonal ($ukuran, $warna){
+    echo "<Table>";
+      echo "<tr>";
+        echo "<td>";
+          
+        echo "</td>";
+      echo "</tr>"; 
+    echo "</Table>";
   }
 
  ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create <Table></Table></title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="form-container">
-    <h2>Membuat Table</h2>
-    <form action="index.php" method="POST">
-      <div class="form-group">
-        <label for="ukuran">Batas Ukuran</label>
-        <input type="number" id="ukuran" name="ukuran" placeholder="Masukkan ukuran table" required>
-      </div>
-      <div class="form-group">
-        <label for="aturan">Aturan filter</label>
-        <select id="aturan" name="aturan" required>
-          <option value="">-- Pilih --</option>
-          <option value="Laki-laki">1</option>
-          <option value="Perempuan">2</option>
-          <option value="Perempuan">3</option>
-          <option value="Perempuan">4</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="warna">Warna filter</label>
-        <select id="warna" name="warna" required>
-          <option value="">-- Pilih --</option>
-          <option value="Red">Red</option>
-          <option value="Blue">Blue</option>
-          <option value="Green">Green</option>
-        </select>
-      </div>
-      <button type="submit">Kirim Data</button>
-    </form>
-  </div>
-</body>
-</html>
