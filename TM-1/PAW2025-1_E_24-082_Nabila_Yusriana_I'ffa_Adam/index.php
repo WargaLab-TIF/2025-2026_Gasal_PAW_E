@@ -54,10 +54,8 @@ $warna  = isset($_GET['warna'])  ? $_GET['warna']        : 'biru';
       echo buatTabelModulus($batas, $aturan, $warna);
     ?>
 
-    <footer class="foot">
-      <small>Pastikan valid HTML5 (uji output yang sudah dirender).</small>
-    </footer>
   </main>
 </body>
 </html>
+
 
