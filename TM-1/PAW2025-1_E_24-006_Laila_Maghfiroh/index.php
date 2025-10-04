@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <h3>Form Tabel</h3>
-    <form method="POST" action="#">
+    <form method="POST">
       <label for="ukuran">Masukkan nilai batas ukuran: </label>
       <input type="number" name="ukuran" id="ukuran" min="1" required>
 
@@ -54,3 +54,4 @@
   </div>
 </body>
 </html>
+
