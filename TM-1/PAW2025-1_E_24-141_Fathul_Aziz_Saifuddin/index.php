@@ -39,9 +39,17 @@
 		<?php 
 		include 'fungsi.php';
 
-		echo "<hr>Batas Ukuran Tabel : $batas <br>";
-		echo "Tampilan : $tampilan <br>";
-		echo "Warna : $warna <br>"; 
+		if (isset($_POST['submit'])) {
+			$tampilan=$_POST['tampilan'];
+			$warna=$_POST['warna'];
+			$batas=$_POST['batas'];
+			atur($batas,$tampilan,$warna);
+
+			echo "<hr>Batas Ukuran Tabel : $batas <br>";
+			echo "Tampilan : $tampilan <br>";
+			echo "Warna : $warna <br>";
+		}
+
 		?>
 	</div>
 </body>
