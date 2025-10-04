@@ -1,15 +1,10 @@
-/* styles.css
-   Catatan singkat:
-   - Hindari font Times New Roman (pakai sistem sans-serif)
-   - Semua styling di CSS, bukan atribut HTML
-*/
+/* styles.css - tema terang (background putih) */
 :root {
-  --bg: #0b0c10;
-  --fg: #e5e7eb;
-  --muted: #9aa0a6;
-  --border: #2b2f36;
+  --bg: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
 
-  /* Warna highlight dasar; akan dioverride oleh kelas warna- */
   --mark: #3b82f6; /* biru default */
 }
 
@@ -37,7 +32,7 @@ h1 { margin: 0 0 8px; font-size: 28px; }
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   padding: 12px;
-  background: #111318;
+  background: #f9fafb;
   border: 1px solid var(--border);
   border-radius: 12px;
   margin-bottom: 20px;
@@ -47,9 +42,9 @@ h1 { margin: 0 0 8px; font-size: 28px; }
 .controls select {
   width: 100%;
   padding: 8px 10px;
-  background: #0f1218;
+  background: #ffffff;
   color: var(--fg);
-  border: 1px solid var(--border);
+  border: 1px solid #d1d5db;
   border-radius: 8px;
   outline: none;
 }
@@ -57,47 +52,47 @@ h1 { margin: 0 0 8px; font-size: 28px; }
   align-self: end;
   padding: 10px 14px;
   border-radius: 10px;
-  background: #1f2937;
+  background: #f3f4f6;
   color: var(--fg);
-  border: 1px solid var(--border);
+  border: 1px solid #d1d5db;
   cursor: pointer;
 }
-.controls button:hover { filter: brightness(1.1); }
+.controls button:hover { filter: brightness(0.98); }
 
 /* Tabel */
 .grid {
   width: 100%;
   border-collapse: collapse;
-  background: #0f1218;
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
 }
 .grid thead th {
   position: sticky; top: 0;
-  background: #121521;
+  background: #f9fafb;
   z-index: 1;
 }
 .grid th, .grid td {
   border: 1px solid var(--border);
   padding: 8px 10px;
   text-align: center;
-  font-weight: 600; /* header tebal, sel biasa akan override di bawah */
+  font-weight: 600;
+  background: #ffffff; /* semua sel putih */
 }
-.grid td {
-  font-weight: 400;
-}
-.grid tbody tr:nth-child(even) td { background: #0d1016; }
-
-.grid.checker tbody tr:nth-child(even) td { background: #0f1218; }
+.grid td { font-weight: 400; }
+/* HAPUS baris zebra ini dari file (jangan diganti):
+   .grid tbody tr:nth-child(even) td { background: #ffffff; }
+*/
 
 .cell.mark {
-  background: color-mix(in oklab, var(--mark) 25%, #0f1218);
-  outline: 2px solid color-mix(in oklab, var(--mark) 60%, #0f1218);
+  background: var(--mark);   /* warna penuh, tanpa arsiran */
+  color: #ffffff;
+  outline: none;
 }
 
 .warna-biru  { --mark: #3b82f6; }
-.warna-hijau { --mark: #22c55e; }
+.warna-hijau { --mark: #16a34a; }
 .warna-kuning{ --mark: #eab308; }
 .warna-merah { --mark: #ef4444; }
 

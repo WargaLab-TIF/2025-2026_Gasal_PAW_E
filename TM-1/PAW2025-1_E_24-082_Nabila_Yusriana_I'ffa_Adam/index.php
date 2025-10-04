@@ -61,9 +61,8 @@ $warna  = isset($_GET['warna'])  ? $_GET['warna']        : 'biru';
     ?>
 
     <footer class="foot">
-      <small>Pastikan valid HTML5 (W3C Validator). Hindari font “Times New Roman”.</small>
+      <small>Pastikan valid HTML5 (uji output yang sudah dirender).</small>
     </footer>
   </main>
 </body>
 </html>
-

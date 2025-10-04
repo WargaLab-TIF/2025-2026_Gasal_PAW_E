@@ -10,57 +10,49 @@ function isPrima(int $n): bool {
 }
 
 function isKubik(int $n): bool {
-  
   if ($n < 0) return false;
   $akarTiga = (int)round(pow($n, 1/3));
   return $akarTiga * $akarTiga * $akarTiga === $n;
 }
+
 function buatTabelModulus(int $batas, string $aturan, string $warna): string {
   if ($batas < 1) $batas = 1;
 
   $warnaClass = 'warna-' . preg_replace('/[^a-z]/','', strtolower($warna));
-  $aturan = in_array($aturan, ['1','2','3','4','5'], true) ? $aturan : '1';
-  $extraTableClass = ($aturan === '5') ? ' checker' : '';
-  $pakaiHeader = ($aturan !== '5');
-
+  // Hanya 4 aturan (tanpa papan catur)
+  $aturan = in_array($aturan, ['1','2','3','4'], true) ? $aturan : '1';
 
   ob_start();
-  echo '<table class="grid ' . htmlspecialchars($warnaClass . $extraTableClass) . '">';
+  echo '<table class="grid ' . htmlspecialchars($warnaClass) . '">';
 
-  if ($pakaiHeader) {
-    echo '<thead><tr><th>r\c</th>';
-    for ($kolom = 1; $kolom <= $batas; $kolom++) {
-      echo '<th scope="col">' . $kolom . '</th>';
-    }
-    echo '</tr></thead>';
+  // Selalu pakai header
+  echo '<thead><tr><th>r\c</th>';
+  for ($kolom = 1; $kolom <= $batas; $kolom++) {
+    echo '<th scope="col">' . $kolom . '</th>';
   }
+  echo '</tr></thead>';
 
   echo '<tbody>';
   for ($baris = 1; $baris <= $batas; $baris++) {
     echo '<tr>';
-    if ($pakaiHeader) {
-      echo '<th scope="row">' . $baris . '</th>';
-    }
+    echo '<th scope="row">' . $baris . '</th>';
 
     for ($kolom = 1; $kolom <= $batas; $kolom++) {
       $nilai = $baris % $kolom;
 
       $tandai = false;
       switch ($aturan) {
-        case '1': 
+        case '1': // bilangan kubik
           $tandai = isKubik($nilai);
           break;
-        case '2': 
+        case '2': // perbatasan
           $tandai = ($baris === 1 || $kolom === 1 || $baris === $batas || $kolom === $batas);
           break;
-        case '3': 
+        case '3': // bilangan prima
           $tandai = isPrima($nilai);
           break;
-        case '4': 
+        case '4': // diagonal dari kiri-atas ke kanan-bawah (↘) — NIM genap
           $tandai = ($baris === $kolom);
-          break;
-        case '5': 
-          $tandai = (($baris + $kolom) % 2 === 0);
           break;
       }
 
