@@ -89,15 +89,4 @@ function atur($limit,$display,$color)
 	echo "</table>";
 }
 
-
-if (isset($_POST['submit'])) {
-	$tampilan=$_POST['tampilan'];
-	$warna=$_POST['warna'];
-	$batas=$_POST['batas'];
-	atur($batas,$tampilan,$warna);
-}
-
-
-
  ?>
-
