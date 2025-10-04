@@ -19,12 +19,6 @@ $warna  = isset($_GET['warna'])  ? $_GET['warna']        : 'biru';
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <h1>TM-1 — Tabel Modulus</h1>
-    <p class="note">
-      Tema <strong>Tabel MODULUS</strong> karena 240411100082 digit terakhir NIM genap.
-
-    </p>
 
   <form class="controls" method="get">
       <label>
@@ -66,3 +60,4 @@ $warna  = isset($_GET['warna'])  ? $_GET['warna']        : 'biru';
   </main>
 </body>
 </html>
+
