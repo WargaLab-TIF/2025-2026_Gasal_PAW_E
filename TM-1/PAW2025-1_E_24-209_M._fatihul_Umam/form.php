@@ -74,7 +74,7 @@
   }
 
   function Komposit ($ukuran, $warna){
-    echo "<table border='1'>";
+    echo "<table >";
     for ($i=0; $i <= $ukuran; $i++) { 
         echo "<tr>";
         for ($j=0; $j <= $ukuran; $j++) { 
@@ -87,7 +87,7 @@
             } else {
                 $nilai = $i ** $j;
                 if (cekPrima($nilai)) {
-                    echo "<td style='background-color:lightgreen;'>$nilai</td>";
+                    echo "<td style='background-color:$warna;'>$nilai</td>";
                 }else {
                     echo "<td>$nilai</td>";
                 }
