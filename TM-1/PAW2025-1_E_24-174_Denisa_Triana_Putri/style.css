@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightyellow;
+    text-align: center;       /* center heading, form, tabel */
+    margin: 0;
+    padding: 20px;
+}
+
+
+h2 {
+    color: darkblue;
+    margin-bottom: 30px;
+}
+
+#tabel table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    width: auto;
+    min-width: 300px;
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 320px;
+    display: block;
+    margin: 20px auto;
+}
+
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+form button {
+    padding: 8px;
+    width: 100%;
+    background-color: lightblue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
+
+th {
+    font-weight: bold;
+    background-color: #eee;
+}
