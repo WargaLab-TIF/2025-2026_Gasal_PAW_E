@@ -1,0 +1,93 @@
+body { 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 400px; 
+    padding: 25px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    background: #ffffff;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.generate-button {
+    width: 100%;
+    background-color: #e7707039; 
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.generate-button:hover {
+    background-color: #3e2522;
+}
+
+.instruction-text {
+    text-align: center;
+    color: #412c0c;
+    font-size: 14px;
+}
+
+table {
+    border-collapse: collapse; 
+    margin: 20px auto; 
+    background-color: #fff2df;
+}
+
+th, td {
+    border: 1px solid #d3a376; 
+    text-align: center;
+    padding: 8px;
+    min-width: 30px;
+}
+
+thead th, tbody th {
+    background-color: #ffffff;
+    font-weight: bold; 
+}
+
+.sel-terfilter.orange   { background-color: #ec7322 !important; color: #fff; }
+.sel-terfilter.pink   { background-color: #f56cac !important; color: #fff; }
+.sel-terfilter.green  { background-color: #2ecc71 !important; color: #fff; }
+.sel-terfilter.yellow { background-color: #f1c40f !important; color: #000; }
+
+.error {
+    text-align: center;
+    color: #e74c3c;
+    background-color: #fdeded;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    max-width: 400px;
+}
