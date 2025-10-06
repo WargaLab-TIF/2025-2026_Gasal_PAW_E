@@ -19,7 +19,7 @@ function generateTable($limit, $filterRule, $filterColor) {
             // Filter sesuai aturan
             switch ($filterRule) {
                 case "kubik":
-                    if (round(pow($value, 1/3)) ** 3 == $value) {
+                    if ($value != 0 && pow(round(pow($value, 1/3)), 3) == $value) {
                         $class = "highlight";
                     }
                     break;
@@ -57,6 +57,6 @@ function isPrime($n) {
     for ($i = 2; $i <= sqrt($n); $i++) {
         if ($n % $i == 0) return false;
     }
-    return true;
+    return true;
 }
 ?>
