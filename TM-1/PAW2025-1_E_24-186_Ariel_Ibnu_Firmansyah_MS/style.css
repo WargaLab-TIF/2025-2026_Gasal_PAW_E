@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+table.tabel {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    font-weight: normal;
+}
+
+th {
+    font-weight: bold;
+    background: yellow;
+}
+
+td.merah {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+td.hijau {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+td.biru {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
