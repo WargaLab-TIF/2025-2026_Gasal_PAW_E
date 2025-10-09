@@ -1,12 +1,4 @@
 <?php 
-	
-	function test_input($data){
-		$data = trim($data);
-		$data = stripcslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}
-
 	function wajib_isi($data){
 		return !empty($data);
 	}
@@ -17,6 +9,10 @@
 
 	function numeric($data){
 		return is_numeric($data);
+	}
+
+	function isjudul($data){
+		return preg_match("/^[a-zA-Z .,]+$/", $data);
 	}
 
 	function isemail($data){
