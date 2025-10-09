@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+.pink {
+    background-color: lightpink;
+}
+
+.grey {
+    background-color: darkgrey;
+}
+
+.biru {
+    background-color: skyblue;
+}

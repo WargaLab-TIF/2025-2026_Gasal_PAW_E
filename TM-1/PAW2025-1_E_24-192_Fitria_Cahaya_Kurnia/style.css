@@ -1,0 +1,50 @@
+body {
+    font-family: arial;
+    font-size: large;
+}
+
+.tabel {
+    border: 1px solid black;
+    margin:auto;
+    margin-top: 100px;
+}
+
+.tabel th, .tabel td {
+    border: 1px solid black;
+    padding: 7px;
+    text-align: center;
+}
+
+fieldset {
+    width: 40px;
+	background-color: lightblue;
+	margin: auto;
+	padding: 30px;
+	display: grid;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px;
+    margin-top: 20px;
+}
+.box{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.box label{
+	width: 180px;
+    font-weight: bold;
+	margin-right: 10px;
+    display: inline-block;
+}
+
+button {
+    margin: auto; 
+    padding: 10px;
+    margin-top: 30px;
+}
+
+input, select{
+    padding: 10px;
+}
