@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff69b4; /* pink */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #353b48;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ffb6c1; 
+    box-shadow: 0 0 6px rgba(255, 182, 193, 0.6);
+}
+
+input[type="text"]:valid,
+input[type="date"]:valid,
+select:valid,
+textarea:valid {
+    border-color: #ffb6c1;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff69b4; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff85c1;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.jenis-kelamin {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    gap: 20px !important;
+    margin-bottom: 10px;
+}
+
+.jenis-kelamin label {
+    font-weight: normal;
+}
+
+.success-page {
+    background-color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.success-container {
+    background-color: #ffc0cb; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    text-align: center;
+    width: 350px;
+}
+
+.success-container h2 {
+    color: #b0004d;
+    margin-bottom: 10px;
+}
+
+.success-container p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b0004d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #8a0040;
+}
+
+h3 {
+    text-align: center;
+    color: #ff69b4; 
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
