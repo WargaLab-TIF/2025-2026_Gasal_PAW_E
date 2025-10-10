@@ -26,8 +26,8 @@
         </select>
         <label for="warna">Warna :</label>
         <select name="warna" id="warna">
-            <option value="merah">Merah</option>
             <option value="biru">Biru</option>
+            <option value="merah">Merah</option>
             <option value="kuning">Kuning</option>
         </select><br>
         <button type="reset">Reset</button>
