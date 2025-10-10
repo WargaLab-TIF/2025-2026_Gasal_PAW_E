@@ -94,7 +94,8 @@ if (isset($_POST['submit'])) {
     
     <?php if ($successMsg): ?>
         <p class="success"><?= $successMsg; ?></p>
-    <?php endif; ?>
+        <?php die(); ?>
+    <?php endif;  ?>
 
     <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <label for="nama">Nama Lengkap :</label>
