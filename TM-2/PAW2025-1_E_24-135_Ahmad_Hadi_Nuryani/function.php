@@ -1,5 +1,5 @@
 <?php
-// Membersihkan input dari karakter berbahaya
+
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -27,5 +27,9 @@ function is_valid_length_numeric($data, $min, $max) {
 function is_valid_length_string($data, $min, $max) {
     $len = strlen($data);
     return ($len >= $min && $len <= $max);
+}
+
+function alamat($data){
+    return preg_match("/^[a-zA-Z0-9\s,.\-#]+$/", $data);
 }
 ?>

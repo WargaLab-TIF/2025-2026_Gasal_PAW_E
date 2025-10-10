@@ -25,6 +25,8 @@ if (isset($_POST['submit'])) {
             $noHpErr = "Field hanya boleh berisi angka";
         } elseif (!is_valid_length_numeric($noHp, 10, 13)) {
             $noHpErr = "Nomor HP harus 10–13 digit";
+        } elseif (substr($noHp, 0, 2) !== "08") {
+            $noHpErr = "Nomor HP harus diawali dengan 08";
         }
     }
 
@@ -63,7 +65,7 @@ if (isset($_POST['submit'])) {
         $alamatErr = "Field masukan wajib diisi";
     } else {
         $alamat = test_input($_POST['alamat']);
-        if (!is_alphanumeric($alamat)) {
+        if (!alamat($alamat)) {
             $alamatErr = "Alamat hanya boleh berisi huruf dan angka";
         } elseif (!is_valid_length_string($alamat, 5, 100)) {
             $alamatErr = "Alamat harus 5–100 karakter";
