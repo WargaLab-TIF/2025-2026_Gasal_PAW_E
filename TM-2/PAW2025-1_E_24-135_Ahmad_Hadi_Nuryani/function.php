@@ -1,5 +1,5 @@
 <?php
-// Membersihkan input dari karakter berbahaya
+
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
