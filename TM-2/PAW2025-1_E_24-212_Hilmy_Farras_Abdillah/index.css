@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b9cece;
+    height: 100%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    padding: 50px;  
+}
+
+form {
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 600px;
+    background-color: rgb(171, 179, 180);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tanggal {
+    display: flex;
+}
+
+.gender {
+    margin-left: 80px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input[type="text"],
+textarea {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+input[type="date"] {
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+button {
+    width: 500px;
+    padding: 10px;
+    background-color: #858d91;
+    color: white;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.success-box {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 50px 40px;
+  width: 700px;
+  box-shadow: 0 4px 12px black;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.success-title {
+  color: #2ecc71;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: #7f8c8d;
+  font-size: 17px;
+}
