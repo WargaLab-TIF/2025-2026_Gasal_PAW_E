@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
         $alamatErr = "Field masukan wajib diisi";
     } else {
         $alamat = test_input($_POST['alamat']);
-        if (!alamat($alamat)) {
+        if (!is_alamat_valid($alamat)) {
             $alamatErr = "Alamat hanya boleh berisi huruf dan angka";
         } elseif (!is_valid_length_string($alamat, 5, 100)) {
             $alamatErr = "Alamat harus 5–100 karakter";
@@ -94,7 +94,6 @@ if (isset($_POST['submit'])) {
     
     <?php if ($successMsg): ?>
         <p class="success"><?= $successMsg; ?></p>
-        <?php die(); ?>
     <?php endif;  ?>
 
     <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">

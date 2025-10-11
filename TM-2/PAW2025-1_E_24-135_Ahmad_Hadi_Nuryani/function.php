@@ -29,7 +29,7 @@ function is_valid_length_string($data, $min, $max) {
     return ($len >= $min && $len <= $max);
 }
 
-function alamat($data){
+function is_alamat_valid($data){
     return preg_match("/^[a-zA-Z0-9\s,.\-#]+$/", $data);
 }
 ?>
