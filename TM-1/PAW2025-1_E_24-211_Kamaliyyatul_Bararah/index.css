@@ -1,0 +1,39 @@
+body {
+	font-family: sans-serif;
+}
+.tab {
+	border: 1px solid;
+	padding: 5px;
+	margin: 20px auto; 
+	margin-top: 30px;      
+}
+.tab th, .tab td{
+	border: 1px solid;
+	padding: 7px;
+}
+fieldset {
+	background-color: lightblue;
+	padding: 30px;
+	height: 160px;
+	width: 250px;
+	margin: 20px auto;
+}
+.isi{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.isi label{
+	width: 200px;
+	margin-right: 10px;
+}
+.isi input{
+	padding: 8px;
+}
+.isi select{
+	padding: 8px;
+}
+.isi button{
+	margin: 20px auto;
+}

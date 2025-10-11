@@ -1,0 +1,73 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    padding: 20px;
+}
+
+select, button {
+    font-family: 'Verdana', sans-serif;
+}
+
+table {
+    margin: 70px auto;
+    box-shadow: 0 2px 8px black;
+}
+
+table, th, td {
+    border: 2px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px black;
+    padding: 10px;
+    width: 600px;
+    margin: auto;
+}
+
+fieldset {
+    background-color: #3fa663;
+    border: none;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.isi {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.isi label {
+    width: 180px;
+    margin-right: 10px;
+    color: white;
+}
+
+.isi input,
+.isi select {
+    padding: 8px 12px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+
+button {
+    background: white;
+    color: #3fa663;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}

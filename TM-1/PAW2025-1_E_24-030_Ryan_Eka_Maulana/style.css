@@ -1,0 +1,37 @@
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+td.red {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+td.green {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+td.blue {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}

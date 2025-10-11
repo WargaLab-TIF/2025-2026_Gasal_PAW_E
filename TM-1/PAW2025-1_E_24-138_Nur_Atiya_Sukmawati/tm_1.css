@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 400px; 
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal; 
+    color: #555;
+    font-size: 14px; 
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.generate-button {
+    width: 100%;
+    background-color: #4dc4a8; 
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.generate-button:hover {
+    background-color: #3aa88c;
+}
+
+.instruction-text {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+.table-title {
+    color: #2c3e50;
+    margin-top: 30px;
+    text-align: center;
+}
+
+table {
+    max-width: 90%;
+    width: auto; 
+    border-collapse: collapse; 
+    margin: 20px auto 50px auto; 
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #dddddd; 
+    text-align: center;
+    padding: 8px;
+    min-width: 30px;
+}
+
+thead th, tbody th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold; 
+}
+
+td.filtered-cell {
+    color: #000; 
+}
+
+td.red {
+    background-color: #e74c3c !important; 
+}
+td.blue {
+    background-color: #3498db !important; 
+}
+td.green {
+    background-color: #2ecc71 !important; 
+}
+td.yellow {
+    background-color: #f1c40f !important; 
+}
+
+.error {
+    color: #e74c3c;
+    background-color: #fdeded;
+    padding: 10px;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    max-width: 400px;
+    text-align: center;
+}
