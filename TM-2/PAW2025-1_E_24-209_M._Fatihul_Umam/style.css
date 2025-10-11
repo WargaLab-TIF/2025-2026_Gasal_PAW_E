@@ -27,6 +27,10 @@ body {
   background-color: rgba(0, 255, 0, 0.2);
 }
 
+.benar h2{
+  text-align: center;
+}
+
 table{
 	width: 100%;
 	text-align: left;

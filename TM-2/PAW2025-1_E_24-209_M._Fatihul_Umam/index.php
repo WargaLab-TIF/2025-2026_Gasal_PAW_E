@@ -108,8 +108,8 @@
       empty($eror_email) && !empty($email)
     ):?>
       <div class="benar">
-          <h3>Input Berhasil!</h3>
-          <p>Semua data telah diisi dengan benar.</p>
+          <h2>Input Berhasil!</h2>
+          <hr>
           <p>Judul       : <b><?= $judul?></b></p>
           <p>Tipe        :  <?= $tipe ?></p>
           <p>Status      :  <?= $status ?></p>
