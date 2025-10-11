@@ -52,6 +52,8 @@
     if (!wajib_isi($luas)) {
       $eror_luas = "Masukkan luas!!!";
       $luas = '';
+    }elseif (!numeric($luas)) {
+      $eror_luas = "Masukkan luas harus berupa angka!!!";
     }
 
     if (!wajib_isi($nama)) {
@@ -65,8 +67,8 @@
     if (!wajib_isi($telepon)) {
       $eror_telepon = "Masukkan nomor telepon!!!";
       $telepon = '';
-    }elseif (!numeric($telepon)) {
-      $eror_telepon = "Masukkan harus angka!!!";
+    }elseif (!istelp($telepon)) {
+      $eror_telepon = "Masukkan nomor!!!";
       $telepon = '';
     }
 
@@ -76,15 +78,6 @@
     }elseif (!isemail($email)) {
       $eror_email = "Masukkan format email!!!";
       $email = '';
-    }
-
-
-    if (empty($eror_nama)&&empty($eror_nomor)&&empty($eror_email)) {
-      echo $tipe;
-      $tipe= '';
-      $Stipe = 'Pilih tipe...';
-      $status= '';
-      $Sstatus = 'Pilih status...';
     }
 	}
 ?>
@@ -99,6 +92,31 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <?php  
+    if (
+      empty($eror_judul) && !empty($judul) &&
+      empty($eror_tipe) && !empty($tipe) &&
+      empty($eror_status) && !empty($status) &&
+      empty($eror_alamat) && !empty($alamat) &&
+      empty($eror_harga) && !empty($harga) &&
+      empty($eror_luas) && !empty($luas) &&
+      empty($eror_nama) && !empty($nama) &&
+      empty($eror_telepon) && !empty($telepon) &&
+      empty($eror_email) && !empty($email)
+    ):?>
+      <div class="benar">
+        <div style="background-color:rgba(0, 255, 0, 0.2); padding:10px; border-radius:8px;">
+          <h3>Input Berhasil!</h3>
+          <p>Semua data telah diisi dengan benar.</p>
+        </div>
+      </div>
+      
+      <?php 
+          $nama = $telepon = $email = $alamat = $tipe = $judul = $status = $harga = $luas ='';
+          $Stipe = 'Pilih tipe...';
+          $Sstatus = 'Pilih status...';
+      ?>
+  <?php endif; ?>
   <div class="container">
     <h1>Form Aset Properti</h1>
     <form action="index.php" method="POST">
@@ -123,7 +141,7 @@
   			</td>
   			<td>
   				<select id="status" name="status">
-			        <option value="<?= $status ?>"><?= $Stipe ?></option>
+			        <option value="<?= $status ?>"><?= $Sstatus ?></option>
 			        <option value="Dijual">Dijual</option>
 			        <option value="Disewa">Disewa</option>
 			    </select>
@@ -161,3 +179,4 @@
   </div>
 </body>
 </html>
+

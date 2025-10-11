@@ -4,15 +4,19 @@
 	}
 
 	function alfabet($data){
-		return preg_match("/^[a-zA-Z ]+$/", $data);
+		return preg_match("/^[a-zA-Z .,]+$/", $data);
 	}
 
 	function numeric($data){
-		return is_numeric($data);
+		return preg_match("/^[0-9]+$/", $data);
+	}
+
+	function istelp($data){
+		return preg_match("/^(08||62)[0-9]{10,11}$/", $data);
 	}
 
 	function isjudul($data){
-		return preg_match("/^[a-zA-Z .,]+$/", $data);
+		return preg_match("/^[a-zA-Z0-9 .,]+$/", $data);
 	}
 
 	function isemail($data){
