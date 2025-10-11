@@ -113,10 +113,8 @@
       ?>
   <?php endif; ?>
   <div class="benar">
-        <div style="background-color:rgba(0, 255, 0, 0.2); padding:10px; border-radius:8px;">
           <h3>Input Berhasil!</h3>
           <p>Semua data telah diisi dengan benar.</p>
-        </div>
       </div>
   <div class="container">
     <h1>Form Aset Properti</h1>
