@@ -12,11 +12,15 @@
 	}
 
 	function numerik_telepon($data) {
-		return preg_match("/^(08|628|\+628)[0-9]{9,10}+$/", $data);
+		return preg_match("/^(08|628|\+628)[0-9]{9,10}$/", $data);
 	}
 
 	function numerik($data) {
 		return preg_match("/^[0-9]+$/", $data);
+	}
+
+	function nik_batas($data) {
+		return preg_match("/^[0-9]{16}$/", $data);
 	}
 
 	function numerik_harga($data) {

@@ -19,6 +19,11 @@
 				</div>
 				<div class="error"><?= $error_nama; ?></div>
 				<div class="plot">
+					<label for="NIK">NIK</label>
+					<input type="text" name="NIK" value="<?= $NIK ?>" id="NIK">			
+				</div>
+				<div class="error"><?= $error_NIK; ?></div>
+				<div class="plot">
 					<label for="telepon">No. telepon</label>
 					<input type="text" name="telepon" value="<?= $telepon ?>" id="telepon">
 				</div>

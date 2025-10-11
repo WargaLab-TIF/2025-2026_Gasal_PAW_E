@@ -1,9 +1,10 @@
 <?php require "fungsi.php";
-	$nama = $telepon = $kode = $email = $alamat = $luas_tanah = $type = $harga = $status = $succes = '';
-	$error_nama = $error_telepon = $error_kode = $error_email = $error_alamat = $error_luas_tanah = $error_type = $error_harga = $error_status = '';
+	$nama = $NIK = $telepon = $kode = $email = $alamat = $luas_tanah = $type = $harga = $status = $succes = '';
+	$error_nama = $error_NIK = $error_telepon = $error_kode = $error_email = $error_alamat = $error_luas_tanah = $error_type = $error_harga = $error_status = '';
 
-	if($_SERVER['REQUEST_METHOD'] == "POST") {
+	if(isset($_POST['submit'])) {
 		$nama = $_POST['nama'];
+		$NIK = $_POST['NIK'];
 		$telepon = $_POST['telepon'];
 		$kode = $_POST['kode'];
 		$alamat = $_POST['alamat'];
@@ -14,14 +15,24 @@
 
 		if(required($nama)) {
 			$error_nama = "*Masukkan Nama Lengkap";
-		}elseif(!alfabet_batas($nama)) {
-			$error_nama = "*Masukan harus 8 digit";
 		}elseif (!alfabet($nama)) {
 			$error_nama = "*Masukan harus alfabet";
+		}elseif(!alfabet_batas($nama)) {
+			$error_nama = "*Masukan harus 8 digit";
+		}
+
+		if(required($NIK)) {
+			$error_NIK = "*Masukkan NIK";
+		}elseif(!numerik($NIK)) {
+			$error_NIK = "*Masukan harus numerik";
+		}elseif (!nik_batas($NIK)) {
+			$error_NIK = "*Masukan harus 16 digit";
 		}
 
 		if(required($telepon)) {
 			$error_telepon = "*Masukkan nomer telepon";
+		}elseif(!numerik($telepon)) {
+			$error_telepon = "*Masukan harus numerik";
 		}elseif (!numerik_telepon($telepon)) {
 			$error_telepon = "*Masukkan sesuai format telepon (12 / 13 digit)";
 		}
@@ -39,7 +50,7 @@
 		}
 
 		if(required($luas_tanah)) {
-			$error_luas_tanah = "*Masukkan luas_tanah";
+			$error_luas_tanah = "*Masukkan luas tanah";
 		}elseif (!numerik($luas_tanah)) {
 			$error_luas_tanah = "*Masukkan luas yang valid";
 		}
@@ -60,9 +71,9 @@
 			$error_status = "*Masukkan status";
 		}
 
-		if(empty($error_nama) && empty($error_harga) && empty($error_kode) && empty($error_alamat) && empty($error_telepon) && empty($error_type) && empty($error_status) && empty($error_luas_tanah) && empty($error_type) && empty($error_status)) {
+		if(empty($error_nama) && empty($error_NIK) && empty($error_harga) && empty($error_kode) && empty($error_alamat) && empty($error_telepon) && empty($error_type) && empty($error_status) && empty($error_luas_tanah) && empty($error_type) && empty($error_status)) {
 			$succes = "Data Masuk.";
-			$nama = $telepon = $kode = $email = $alamat = $luas_tanah = $type = $harga = $status = '';
+			$nama = $NIK = $telepon = $kode = $email = $alamat = $luas_tanah = $type = $harga = $status = '';
 		}
 	}
 
