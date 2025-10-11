@@ -116,9 +116,9 @@ if (isset($_POST['submit'])) {
 	}
 
 	if (
-		empty($namaPembeli) && empty($nikPembeli) && empty($alamatPembeli) && empty($telefonPembeli) &&
+		empty($namaPembeli) && empty($nikPembeli) && empty($alamatPembeli) && empty($telefonPembeli) && empty($pekerjaan)&&
 		empty($namaPenjual) && empty($nikPenjual) && empty($telefonPenjual) &&
-		empty($noSertifikat) && empty($luas) && empty($harga) && empty($lokasi) 
+		empty($noSertifikat) && empty($luas) && empty($harga) && empty($lokasi) && empty($hakKepemilikan)
 		) {
 		$showForm = false;
 		}
@@ -219,7 +219,7 @@ if (isset($_POST['submit'])) {
 					<option value="HP" <?php if ($saveHakKepemilikan == "HP") echo 'selected'; ?>>Hak Pakai</option>
 					<option value="HS" <?php if ($saveHakKepemilikan == "HS") echo 'selected'; ?>>Hak Sewa</option>
 				</select><br>
-				<div class="error"><?= $hakKepemilikan ?></div><br><br>
+				<div class="error"><?= $hakKepemilikan ?></div>
 
 				<label>Harga NJOP:</label>
 				<input type="text" name="harga" value="<?= $saveHarga ?>" placeholder="input dengan format numeric">
