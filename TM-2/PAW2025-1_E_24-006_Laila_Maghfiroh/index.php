@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $telepon = test_input($_POST['telepon']);
     $email = test_input($_POST['email']);
 
-    // contoh validasi sederhana
     if (!wajib_isi($NIK)) $error_nik = "Wajib diisi";
     elseif (!numerik($NIK)) $error_nik = "Harus angka";
     elseif (!panjang_digit($NIK, 16)) $error_nik = "Harus 16 digit";
@@ -168,7 +167,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <input type="text" name="email" value="<?= $email ?>" placeholder="contoh: nama@domain.com">
         <div class="error"><?= $error_email ?></div>
 
-        <!-- Tombol sudah di dalam form -->
         <div class="form-footer">
           <button type="submit">Kirim</button>
         </div>
@@ -177,4 +175,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   </div>
 </div>
 </body>
+
 </html>
