@@ -95,12 +95,12 @@
  ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
-	<title>Form sederhana</title>
+	<title>ASET KENDARAAN</title>
 </head>
 <body>
 
@@ -150,18 +150,8 @@
 		<label>Nomor Rangka :</label>
 		<input type="text" name="rangka" value="<?= $rangka; ?>">
 		<div class="error"><?= $error_rangka; ?></div>
-
-		<!-- <div class="sebaris">
-		<input type="radio" id="baru" name="kondisi" value="baru">
-		<label for="baru">Baru</label>
-		<div class="tengah"></div>
-		<input type="radio" id="bekas" name="kondisi" value="bekas">
-		<label for="bekas">Bekas</label>
-		</div>
-		<div class="error"><?= $error_kondisi; ?></div>
- -->
-
-		<button type="submit" name="submit">Submit</button>
+		
+		<input type="submit" name="submit" value="Submit">
 		<div class="success"><?= $success; ?></div>
 	</form>
 	
