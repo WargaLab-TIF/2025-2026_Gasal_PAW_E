@@ -1,5 +1,4 @@
 <?php
-// TM2 Kelas E — Tema D (Kepegawaian)
 require __DIR__ . '/includes/functions.php';
 $errors = [];
 $submitted = ($_SERVER['REQUEST_METHOD'] === 'POST');
@@ -10,14 +9,10 @@ if ($submitted) {
     foreach ($fields as $f) {
         if (!is_required($_POST[$f] ?? '')) add_error($errors, $f, 'Field wajib diisi.');
     }
-    // Alphabetic
     if (is_required($_POST['nama_pegawai'] ?? '') && !is_alpha($_POST['nama_pegawai'])) add_error($errors, 'nama_pegawai', 'Hanya huruf dan spasi.');
     if (is_required($_POST['unit'] ?? '') && !is_alpha($_POST['unit'])) add_error($errors, 'unit', 'Hanya huruf dan spasi.');
-    // Numeric
     if (is_required($_POST['nip'] ?? '') && !is_numeric_str($_POST['nip'])) add_error($errors, 'nip', 'Hanya digit 0-9.');
-    // Alphanumeric
     if (is_required($_POST['kode_pegawai'] ?? '') && !is_alnum($_POST['kode_pegawai'])) add_error($errors, 'kode_pegawai', 'Hanya huruf dan angka.');
-    // Length checks
     if (is_required($_POST['nip'] ?? '') && !has_digit_length($_POST['nip'], 18)) add_error($errors, 'nip', 'Harus tepat 18 digit.');
     if (is_required($_POST['nama_pegawai'] ?? '') && !has_char_length($_POST['nama_pegawai'], 3, 50)) add_error($errors, 'nama_pegawai', 'Panjang 3 s.d. 50 karakter.');
     if (is_required($_POST['kode_pegawai'] ?? '') && !has_char_length($_POST['kode_pegawai'], 6, 10)) add_error($errors, 'kode_pegawai', 'Panjang 6 s.d. 10 karakter.');
@@ -28,12 +23,12 @@ if ($submitted) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>TM2: Form Kepegawaian</title>
+    <title> Form Kepegawaian</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <div class="container">
-    <h1>TM2 Kelas E: Pendataan Kepegawaian</h1>
+    <h1>Pendataan Kepegawaian</h1>
     <?php if ($submitted && empty($errors)): ?>
         <div class="success">Semua isian valid. Data berhasil diterima.</div>
         <table>
