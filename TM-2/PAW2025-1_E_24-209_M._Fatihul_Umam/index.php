@@ -104,12 +104,7 @@
       empty($eror_telepon) && !empty($telepon) &&
       empty($eror_email) && !empty($email)
     ):?>
-      <div class="benar">
-        <div style="background-color:rgba(0, 255, 0, 0.2); padding:10px; border-radius:8px;">
-          <h3>Input Berhasil!</h3>
-          <p>Semua data telah diisi dengan benar.</p>
-        </div>
-      </div>
+      
       
       <?php 
           $nama = $telepon = $email = $alamat = $tipe = $judul = $status = $harga = $luas ='';
@@ -117,6 +112,12 @@
           $Sstatus = 'Pilih status...';
       ?>
   <?php endif; ?>
+  <div class="benar">
+        <div style="background-color:rgba(0, 255, 0, 0.2); padding:10px; border-radius:8px;">
+          <h3>Input Berhasil!</h3>
+          <p>Semua data telah diisi dengan benar.</p>
+        </div>
+      </div>
   <div class="container">
     <h1>Form Aset Properti</h1>
     <form action="index.php" method="POST">
