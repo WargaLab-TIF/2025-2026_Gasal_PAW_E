@@ -4,7 +4,6 @@ $errors = [];
 $submitted = ($_SERVER['REQUEST_METHOD'] === 'POST');
 
 if ($submitted) {
-    // Hanya 4 field sesuai permintaan
     $fields = ['nama_pegawai','unit','nip','kode_pegawai'];
     foreach ($fields as $f) {
         if (!is_required($_POST[$f] ?? '')) add_error($errors, $f, 'Field wajib diisi.');
