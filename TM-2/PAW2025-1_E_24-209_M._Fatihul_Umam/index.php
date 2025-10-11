@@ -5,6 +5,7 @@
   $eror_judul =$eror_tipe = $eror_nama = $eror_telepon = $eror_email = $eror_alamat = $eror_status = $eror_harga = $eror_luas = '';
   $Stipe = 'Pilih tipe...';
   $Sstatus = 'Pilih status...';
+  $cekint = $ceksel ='';
 
 	
 	if ($_SERVER['REQUEST_METHOD']== "POST") {
@@ -23,7 +24,7 @@
     if (!wajib_isi($judul)) {
       $eror_judul = "Masukkan judul!!!";
       $judul = '';
-    }elseif (!isjudul($judul)) {
+    }elseif (!alfanumeric($judul)) {
       $eror_judul = "simbol hanya boleh titik '.' koma ',' !!!";
       $judul = '';
     }
@@ -47,6 +48,8 @@
     if (!wajib_isi($harga)) {
       $eror_harga = "Masukkan harga!!!";
       $harga = '';
+    }elseif (!numeric($harga)) {
+      $eror_luas = "Masukkan Harga harus berupa angka!!!";
     }
 
     if (!wajib_isi($luas)) {
@@ -104,23 +107,33 @@
       empty($eror_telepon) && !empty($telepon) &&
       empty($eror_email) && !empty($email)
     ):?>
-      
-      
+      <div class="benar">
+          <h3>Input Berhasil!</h3>
+          <p>Semua data telah diisi dengan benar.</p>
+          <p>Judul       : <b><?= $judul?></b></p>
+          <p>Tipe        :  <?= $tipe ?></p>
+          <p>Status      :  <?= $status ?></p>
+          <p>Alamat      :  <?= $alamat ?></p>
+          <p>Harga       :  <?= $harga ?></p>
+          <p>Luas        :  <?= $luas ?></p>
+          <p>Nama        :  <?= $nama ?></p>
+          <p>No telepon  :  <?= $telepon ?></p>
+          <p>Email       :  <?= $email ?></p>
+      </div>
       <?php 
           $nama = $telepon = $email = $alamat = $tipe = $judul = $status = $harga = $luas ='';
           $Stipe = 'Pilih tipe...';
           $Sstatus = 'Pilih status...';
+          $cekint = 'readonly';
+          $ceksel = 'disabled'
       ?>
   <?php endif; ?>
-  <div class="benar">
-          <h3>Input Berhasil!</h3>
-          <p>Semua data telah diisi dengan benar.</p>
-      </div>
+  
   <div class="container">
     <h1>Form Aset Properti</h1>
     <form action="index.php" method="POST">
       <label for="judul">Judul Properti</label>
-      <input type="text" id="judul" name="judul" placeholder="Contoh: Rumah minimalis 2 lantai" value="<?= $judul ?>">
+      <input type="text" id="judul" name="judul" placeholder="Contoh: Rumah minimalis 2 lantai" value="<?= $judul ?>" <?=$cekint?>>
       <p class="error"><?= $eror_judul?></p>
   	<table>
   		<tr>
@@ -129,7 +142,7 @@
   		</tr>
   		<tr>
   			<td>
-  				<select id="tipe" name="tipe">
+  				<select id="tipe" name="tipe" <?=$ceksel?>>
 			        <option value="<?= $tipe ?>"><?= $Stipe ?></option>
 			        <option value="Rumah">Rumah</option>
 			        <option value="Apartemen">Apartemen</option>
@@ -139,7 +152,7 @@
           <p class="error"><?= $eror_tipe?></p>
   			</td>
   			<td>
-  				<select id="status" name="status">
+  				<select id="status" name="status" <?=$ceksel?>>
 			        <option value="<?= $status ?>"><?= $Sstatus ?></option>
 			        <option value="Dijual">Dijual</option>
 			        <option value="Disewa">Disewa</option>
@@ -149,28 +162,28 @@
   		</tr>
   	</table> 
       <label for="alamat">Alamat</label>
-      <textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap"><?= $alamat ?></textarea>
+      <textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap" <?=$cekint?>><?= $alamat ?></textarea>
       <p class="error"><?= $eror_alamat?></p>
 
       <label for="harga">Harga (Rp)</label>
-      <input type="text" id="harga" name="harga" placeholder="350000000" value="<?= $harga ?>">
+      <input type="text" id="harga" name="harga" placeholder="350000000" value="<?= $harga ?>" <?=$cekint?>>
       <p class="error"><?= $eror_harga?></p>
 
       <label for="luas">Luas (m²)</label>
-      <input type="text" id="luas" name="luas" placeholder="120" value="<?= $luas ?>">
+      <input type="text" id="luas" name="luas" placeholder="120" value="<?= $luas ?>" <?=$cekint?>>
       <p class="error"><?= $eror_luas?></p>
 
 
       <label for="nama">Nama kontak</label>
-      <input type="text" id="nama" name="nama" placeholder="Nama pemilik / agen" value="<?= $nama ?>">
+      <input type="text" id="nama" name="nama" placeholder="Nama pemilik / agen" value="<?= $nama ?>" <?=$cekint?>>
       <p class="error"><?= $eror_nama?></p>
 
       <label for="telepon">No. Telepon</label>
-      <input type="text" id="telepon" name="telepon" placeholder="0812xxxx" value="<?= $telepon ?>">
+      <input type="text" id="telepon" name="telepon" placeholder="0812xxxx" value="<?= $telepon ?>" <?=$cekint?>>
       <p class="error"><?= $eror_telepon?></p>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="nama@domain.com" value="<?= $email ?>">
+      <input type="email" id="email" name="email" placeholder="nama@domain.com" value="<?= $email ?>" <?=$cekint?>>
       <p class="error"><?= $eror_email?></p>
 
       <button type="submit">Kirim</button>

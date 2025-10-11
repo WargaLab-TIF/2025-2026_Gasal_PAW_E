@@ -11,12 +11,12 @@
 		return preg_match("/^[0-9]+$/", $data);
 	}
 
-	function istelp($data){
-		return preg_match("/^(08||62)[0-9]{10,11}$/", $data);
+	function alfanumeric($data){
+		return preg_match("/^[a-zA-Z0-9 .,]{3,}+$/", $data);
 	}
 
-	function isjudul($data){
-		return preg_match("/^[a-zA-Z0-9 .,]+$/", $data);
+	function istelp($data){
+		return preg_match("/^(08||62)[0-9]{10,11}$/", $data);
 	}
 
 	function isemail($data){
