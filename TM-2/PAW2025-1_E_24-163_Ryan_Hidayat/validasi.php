@@ -1,0 +1,80 @@
+<?php require "fungsi.php";
+	$nama = $NIK = $telepon = $kode = $email = $alamat = $luas_tanah = $type = $harga = $status = $succes = '';
+	$error_nama = $error_NIK = $error_telepon = $error_kode = $error_email = $error_alamat = $error_luas_tanah = $error_type = $error_harga = $error_status = '';
+
+	if(isset($_POST['submit'])) {
+		$nama = $_POST['nama'];
+		$NIK = $_POST['NIK'];
+		$telepon = $_POST['telepon'];
+		$kode = $_POST['kode'];
+		$alamat = $_POST['alamat'];
+		$luas_tanah = $_POST['luas_tanah'];
+		$type = $_POST['type'];
+		$harga = $_POST['harga'];
+		$status = $_POST['status'];
+
+		if(required($nama)) {
+			$error_nama = "*Masukkan Nama Lengkap";
+		}elseif (!alfabet($nama)) {
+			$error_nama = "*Masukan harus alfabet";
+		}elseif(!alfabet_batas($nama)) {
+			$error_nama = "*Masukan harus 8 digit";
+		}
+
+		if(required($NIK)) {
+			$error_NIK = "*Masukkan NIK";
+		}elseif(!numerik($NIK)) {
+			$error_NIK = "*Masukan harus numerik";
+		}elseif (!nik_batas($NIK)) {
+			$error_NIK = "*Masukan harus 16 digit";
+		}
+
+		if(required($telepon)) {
+			$error_telepon = "*Masukkan nomer telepon";
+		}elseif(!numerik($telepon)) {
+			$error_telepon = "*Masukan harus numerik";
+		}elseif (!numerik_telepon($telepon)) {
+			$error_telepon = "*Masukkan sesuai format telepon (12 / 13 digit)";
+		}
+
+		if(required($kode)) {
+			$error_kode = "*Masukkan kode booking";
+		}elseif (!alfanumerik($kode)) {
+			$error_kode = "*Masukkan minimal 8 digit";
+		}
+
+		if(required($alamat)) {
+			$error_alamat = "*Masukkan alamat";
+		}elseif (!is_alamat($alamat)) {
+			$error_alamat = "*Masukan tidak boleh ngasal";
+		}
+
+		if(required($luas_tanah)) {
+			$error_luas_tanah = "*Masukkan luas tanah";
+		}elseif (!numerik($luas_tanah)) {
+			$error_luas_tanah = "*Masukkan luas yang valid";
+		}
+
+		if(required($type)) {
+			$error_type = "*Masukkan type";
+		}
+
+		if(required($harga)) {
+			$error_harga = "*Masukkan harga";
+		}elseif (!numerik($harga)) {
+			$error_harga = "*Masukan harus numerik";
+		}elseif (!numerik_harga($harga)) {
+			$error_harga = "*Masukkan harga yang ngotak";
+		}
+
+		if(required($status)) {
+			$error_status = "*Masukkan status";
+		}
+
+		if(empty($error_nama) && empty($error_NIK) && empty($error_harga) && empty($error_kode) && empty($error_alamat) && empty($error_telepon) && empty($error_type) && empty($error_status) && empty($error_luas_tanah) && empty($error_type) && empty($error_status)) {
+			$succes = "Data Masuk.";
+			$nama = $NIK = $telepon = $kode = $email = $alamat = $luas_tanah = $type = $harga = $status = '';
+		}
+	}
+
+?>
