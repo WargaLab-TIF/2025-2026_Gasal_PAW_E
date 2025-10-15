@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    font-weight: normal;
+}
+
+th {
+    font-weight: bold;
+    background: #f0f0f0;
+}
+
+td.highlight {
+    background-color: var(--color);
+    font-weight: bold;
+}
