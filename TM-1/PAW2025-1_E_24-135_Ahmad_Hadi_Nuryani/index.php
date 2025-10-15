@@ -18,12 +18,16 @@
                 <option value="bilangan_kuadrat">Bilangan kuadrat</option>
                 <option value="pola_papan_catur">Pola papan catur</option>
                 <option value="bilangan_komposit">Bilangan Komposit</option>
-            <option value="arsiran_diagonal">Arsiran Diagonal (kanan atas ke kiri bawah)</option>
+                <option value="arsiran_diagonal">Arsiran Diagonal (kanan atas ke kiri bawah)</option>
+                <option value="bistop_move">Bistop move</option>
+                <option value="rock_move">Rock move</option>
+                <option value="queen_move">Queen move</option>
+                <option value="snake">Snake</option>
         </select>
         <label for="warna">Warna :</label>
         <select name="warna" id="warna">
-            <option value="merah">Merah</option>
             <option value="biru">Biru</option>
+            <option value="merah">Merah</option>
             <option value="kuning">Kuning</option>
         </select><br>
         <button type="reset">Reset</button>
