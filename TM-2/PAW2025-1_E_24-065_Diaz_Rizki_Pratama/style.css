@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    background: #e7f9ff;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px black;
+}
+
+.form-header {
+    background: lightblue;
+    padding: 30px;
+    text-align: center;
+}
+
+.form-header-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    background: #f8f9fa;
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 30px;
+    width: 100%;
+    border-top: 3px solid #156197;
+    border-bottom: 3px solid #156197;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+input[type="text"],
+select {
+    width: 640px;
+    margin: 0 30px;
+    padding: 12px 15px;
+    border: 7px solid #e0e0e0;
+    border-radius: 15px;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+
+input[type="text"]::placeholder {
+    color: #8a8585;
+    font-size: 13px;
+    font-family: Tahoma, sans-serif;
+}
+
+select {
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin: 5px 30px 0;
+    font-weight: 500;
+}
+
+button[type="submit"] {
+    width: 70px;
+    margin: 30px 30px;
+    padding: 15px;
+    background: #156197;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e74c3c;
+}
+
+.success-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 40px black;
+}
+
+.success-title {
+    color: lightblue;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.success-message {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
